@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ D3.js - Doanh Thu</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Biểu đồ Doanh Thu</h1>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <h3>Chọn biểu đồ</h3>
+        <ul>
+            <li><button onclick="showChart('chart1')">Chart 1: Doanh thu theo mặt hàng</button></li>
+            <li><button onclick="showChart('chart2')">Chart 2: Doanh thu theo nhóm hàng</button></li>
+            <li><button onclick="showChart('chart3')">Chart 3: Doanh thu theo nhóm hàng (Tháng)</button></li>
+            <li><button onclick="showChart('chart4')">Chart 4: Doanh thu theo ngày trong tuần</button></li>
+            <li><button onclick="showChart('chart5')">Chart 5: Doanh thu theo ngày trong tháng</button></li>
+            <li><button onclick="showChart('chart6')">Chart 6: Doanh thu theo khung giờ</button></li>
+            <li><button onclick="showChart('chart7')">Chart 7: Tỷ lệ doanh thu theo nhóm hàng</button></li>
+            <li><button onclick="showChart('chart8')">Chart 8: Doanh thu theo nhóm hàng (Khác)</button></li>
+            <li><button onclick="showChart('chart9')">Chart 9: Doanh thu theo nhóm hàng (Khác)</button></li>
+            <li><button onclick="showChart('chart10')">Chart 10: Doanh thu theo nhóm hàng (Khác)</button></li>
+            <li><button onclick="showChart('chart11')">Chart 11: Doanh thu theo nhóm hàng (Khác)</button></li>
+            <li><button onclick="showChart('chart12')">Chart 12: Doanh thu theo nhóm hàng (Khác)</button></li>
+        </ul>
+    </aside>
+
+    <!-- Khu vực chứa chart -->
+    <main id="main-content">
+        <h2 id="chart-title">Doanh thu theo mặt hàng</h2>
+        <div id="chart-container"></div>
+    </main>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+h1, h2 {
+    margin-left: 0px; /* Để tránh bị che bởi sidebar */
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0; /* Sát mép trái */
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+#sidebar h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin: 10px 0;
+}
+
+#sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #09143f;
+    color: rgb(233, 241, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sidebar button:hover {
+    background-color: #3aafd7;
+}
+
+/* Khu vực chính */
+#main-content {
+    margin-left: 270px; /* Phù hợp với width của sidebar (250px) + padding 20px */
+    padding: 20px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+/* Chart container */
+#chart-container {
+    width: 100%;
+    height: auto;
+    display: block; /* Mặc định không dùng grid cho các chart khác */
+    gap: 20px; /* Khoảng cách giữa các biểu đồ */
+}
+
+/* Định dạng chung cho các div trong chart-container */
+#chart-container div {
+    width: 100%;
+    height: 400px; /* Đặt chiều cao cố định để các biểu đồ đồng đều */
+    box-sizing: border-box;
+    overflow-x: auto; /* Thêm cuộn ngang nếu nội dung vượt quá */
+}
+
+/* Áp dụng bố cục 3-2 cho chart9 */
+#chart-container.chart9-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột cho hàng trên */
+    gap: 20px;
+}
+
+/* Đảm bảo hàng dưới có 2 cột */
+#chart-container.chart9-grid .chart9-sub:nth-child(4) {
+    grid-column: 1 / 2; /* Đặt biểu đồ thứ 4 vào cột 1 */
+}
+
+#chart-container.chart9-grid .chart9-sub:nth-child(5) {
+    grid-column: 2 / 3; /* Đặt biểu đồ thứ 5 vào cột 2 */
+}
+
+/* Chỉ áp dụng khung nền và kích thước lớn hơn cho chart9 */
+#chart-container .chart9-sub {
+    background-color: #f5f5f5; /* Khung nền màu nhạt */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    border-radius: 5px; /* Bo góc khung */
+    padding: 10px; /* Padding để nội dung không sát viền */
+    min-width: 500px; /* Đảm bảo đủ không gian cho SVG rộng hơn */
+}
+
+/* Áp dụng bố cục 3-2 cho chart10 */
+#chart-container.chart10-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột cho hàng trên */
+    gap: 20px;
+}
+
+/* Đảm bảo hàng dưới có 2 cột */
+#chart-container.chart10-grid .chart10-sub:nth-child(4) {
+    grid-column: 1 / 2; /* Đặt biểu đồ thứ 4 vào cột 1 */
+}
+
+#chart-container.chart10-grid .chart10-sub:nth-child(5) {
+    grid-column: 2 / 3; /* Đặt biểu đồ thứ 5 vào cột 2 */
+}
+
+/* Chỉ áp dụng khung nền và kích thước lớn hơn cho chart10 */
+#chart-container .chart10-sub {
+    background-color: #f5f5f5; /* Khung nền màu nhạt */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    border-radius: 5px; /* Bo góc khung */
+    padding: 10px; /* Padding để nội dung không sát viền */
+    min-width: 500px; /* Đảm bảo đủ không gian cho SVG rộng hơn */
+}
+
+#chart-container h3 {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#chart-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+#tooltip {
+    pointer-events: none;
+}
