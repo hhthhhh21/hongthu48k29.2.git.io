@@ -792,18 +792,18 @@ function showChart(chartId) {
 
     let title;
     switch(chartId) {
-        case 'chart1': title = 'Doanh thu theo mặt hàng'; break;
-        case 'chart2': title = 'Doanh thu theo nhóm hàng'; break;
-        case 'chart3': title = 'Doanh thu theo nhóm hàng (Tháng)'; break;
-        case 'chart4': title = 'Doanh thu theo ngày trong tuần'; break;
-        case 'chart5': title = 'Doanh thu theo ngày trong tháng'; break;
-        case 'chart6': title = 'Doanh thu theo khung giờ'; break;
-        case 'chart7': title = 'Tỷ lệ doanh thu theo nhóm hàng'; break;
+        case 'chart1': title = 'Doanh số bán hàng theo Mặt hàng'; break;
+        case 'chart2': title = 'Doanh số bán hàng theo Nhóm hàng'; break;
+        case 'chart3': title = 'Doanh số bán hàng theo Tháng'; break;
+        case 'chart4': title = 'Doanh số trung bình theo Ngày trong tuần'; break;
+        case 'chart5': title = 'Doanh số trung bình theo Ngày trong Tháng'; break;
+        case 'chart6': title = 'Doanh số bán hàng trung bình theo khung giờ'; break;
+        case 'chart7': title = 'Xác suất bán hàng theo Nhóm hàng'; break;
         case 'chart8': title = 'Xác suất bán hàng theo Nhóm hàng theo Tháng'; break;
-        case 'chart9': title = 'Xác suất bán hàng theo Mặt hàng trong từng Nhóm hàng'; break;
-        case 'chart10': title = 'Xác suất bán hàng theo Nhóm hàng theo Tháng'; break;
-        case 'chart11': title = 'Phân phối Mức chi trả của Khách'; break;
-        case 'chart12': title = 'Doanh thu theo nhóm hàng (chart12)'; break;
+        case 'chart9': title = 'Xác suất bán hàng của Mặt hàng theo Nhóm hàng'; break;
+        case 'chart10': title = 'Xác suất bán hàng của Mặt hàng theo Nhóm hàng theo Tháng'; break;
+        case 'chart11': title = 'Phân phối Lượt mua hàng'; break;
+        case 'chart12': title = 'Phân phối Mức chi trả của Khách'; break;
         default: title = `Doanh thu theo nhóm hàng (${chartId})`;
     }
     d3.select("#chart-title").text(title);
